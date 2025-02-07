@@ -15,5 +15,5 @@ int main()
     if (num3>=largest){
         largest = num3;
     }
-    printf("%d",largest);
+    printf("The largest number is : %d",largest);
 }
