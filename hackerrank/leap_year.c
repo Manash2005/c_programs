@@ -2,28 +2,19 @@
 
 int main()
 {
-    int Y;
-    scanf("%d", &Y);
+    int y;
+    scanf("%d", &y);
 
-    if (Y < 0) 
-    {
-        printf("The given year %d is Invalid year.", Y);
+    if (y > 0){
+        if ( (y%4==0 && y%100 != 0) || y%400 == 0){
+            printf("Leap Year");
+        }
+        else{
+            printf("Not Leap Year");
+        }
     }
-    else if (Y % 400 == 0) 
-    {
-        printf("Yes, %d is a leap year.", Y);
-    }
-    else if (Y % 100 == 0)
-    {
-        printf("No, %d is not a leap year.", Y);
-    }
-    else if (Y % 4 == 0) 
-    {
-        printf("Yes, %d is a leap year.", Y);
-    }
-    else 
-    {
-        printf("No, %d is not a leap year.", Y);
+    else{
+        printf("Not a valid year");
     }
 
     return 0;
